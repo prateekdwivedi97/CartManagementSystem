@@ -20,15 +20,15 @@ public class OrderAndCartPresentationImpl implements OrderAndCartPresentation{
 		try {
 			return oacs.addItemToCart(cartDto);
 		} catch (UserNonExistentException e) {
-			System.out.println(e.errorMessage());
-		} catch (ProductIdTypeMismatchException e) {
-			// TODO Auto-generated catch block
+			
 			System.out.println(e.errorMessage());
 		} catch (InvalidProductIdException e) {
 			// TODO Auto-generated catch block
+			
 			System.out.println(e.errorMessage());
 		}catch(QuantityNotInStockException e)
 		{
+			
 			System.out.println(e.errorMessage());
 		}
 		return false;

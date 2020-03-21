@@ -15,12 +15,15 @@ public class UserRepository {
 	  }
 	 public boolean CheckIfPresent(String userId) throws UserNonExistentException 
 	 {
+		 boolean t=false;
 		if(cartUser.contains(userId)) {
-			return true;
+			t=true;
 		}else {
-			System.out.println("User id is invalid!!Re-enter the data");
+			System.out.println("Item cannot be added to the cart Reason:Incorrect USER-ID");
+			t=false;
 			throw new UserNonExistentException();
 		}
+		return t;
 	 }
 	 public UserRepository()
 	 {

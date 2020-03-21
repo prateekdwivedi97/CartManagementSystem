@@ -33,19 +33,20 @@ public boolean CheckIfPresent(int productId,CartDto d) throws ProductIdTypeMisma
 	     else if(((cartProd.containsKey(productId))==false))
 	     {
 		 t=false;
-		System.out.println("Product id is invalid!!Re-enter the data");
+		System.out.println("Item cannot be added to the cart Reason: Incorrect PRODUCT-ID");
 		throw new InvalidProductIdException();
 	     }
 	     else if(d.getQuantity()>cartProd.get(productId))
 	     {
 	    	 t=false;
-	    	 System.out.println("Quantity demanded is not available in stock!!Re-enter the data");
+	    	 System.out.println("Item cannot be added to the cart Reason:Incorrect QUANTITY ");
 	    	 throw new QuantityNotInStockException();
 	     }
 	     else
 	     {
 	    	 t=false;
 	     }
+	     System.out.println(t);
 		  return t;
 }
       

@@ -40,7 +40,7 @@ public class OrderController {
 				pid = sc.nextInt();
 			} catch (InputMismatchException e) {
 				ProductIdTypeMismatchException p = new ProductIdTypeMismatchException();
-				p.errorMessage();
+				System.out.println(p.errorMessage());
 				System.exit(0);
 			}
 			sc.nextLine();
@@ -75,7 +75,7 @@ public class OrderController {
 					cart.add(cart1);
 					System.out.println(cart1.getUserId() + " " + cart1.getProductId() + " " + cart1.getQuantity());
 				} else {
-					System.out.println("Not the valid input re-enter the details ");
+					System.out.println("Try  re-entering the details ");
 				}
 				System.out.println("Do you want to see all the items in your cart:Y or N ");
 				String t = sc.nextLine();

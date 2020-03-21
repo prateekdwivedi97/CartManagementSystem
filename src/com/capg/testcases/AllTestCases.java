@@ -15,7 +15,7 @@ import com.capg.service.OrderAndCartServiceImpl;
 
 
 @RunWith(Suite.class)
-@SuiteClasses({OrderAndCartServiceImpl.class,OrderAndCartPrsesentationTest.class})
+@SuiteClasses({OrderAndCartServiceImpl.class,OrderAndCartPresentationTest.class})
 public class AllTestCases {
 	public static void main(String[] args) {
 	    // code relevant to test suite goes here
