@@ -26,8 +26,9 @@ public class OrderAndCartPresentationTest {
 		d.setUserId("Veeru");
 		d.setProductId(1);
 		d.setQuantity(4);
+		System.out.print("Test Case 1: ");
 		 oacpti.addItemToCart(d);
-		
+		System.out.println();
 	}
  
 	@Test
@@ -35,7 +36,9 @@ public class OrderAndCartPresentationTest {
 		d1.setUserId("Ram");
 		d1.setProductId(17);
 		d1.setQuantity(4);
+		System.out.print("Test Case 2: ");
 		 oacpti.addItemToCart(d1);
+		 System.out.println();
 	}
 	
 	@Test
@@ -43,6 +46,17 @@ public class OrderAndCartPresentationTest {
 		d2.setUserId("Ram");
 		d2.setProductId(1);
 		d2.setQuantity(8);
+		System.out.print("Test Case 3: ");
+		oacpti.addItemToCart(d2);
+		System.out.println();
+	}
+	
+	@Test
+	public void test3() {
+		d2.setUserId("Ram");
+		d2.setProductId(1);
+		d2.setQuantity(4);
+		System.out.print("Test Case 4: ");
 		oacpti.addItemToCart(d2);
 	}
 	

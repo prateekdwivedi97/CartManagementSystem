@@ -22,14 +22,17 @@ public class OrderAndCartPresentationImpl implements OrderAndCartPresentation{
 		} catch (UserNonExistentException e) {
 			
 			System.out.println(e.errorMessage());
+			System.out.println();
 		} catch (InvalidProductIdException e) {
 			// TODO Auto-generated catch block
 			
 			System.out.println(e.errorMessage());
+			System.out.println();
 		}catch(QuantityNotInStockException e)
 		{
 			
 			System.out.println(e.errorMessage());
+			System.out.println();
 		}
 		return false;
 	}
