@@ -11,8 +11,7 @@ import com.capg.dto.CartDto;
 public class OrderAndCartServiceTest {
 OrderAndCartServiceImpl oacsi;
 CartDto d=new CartDto();
-CartDto d1=new CartDto();
-CartDto d2=new CartDto();
+
 	@Before
 	public void setUp() throws Exception {
 		oacsi=new OrderAndCartServiceImpl();
@@ -31,22 +30,23 @@ CartDto d2=new CartDto();
 	
 	@Test(expected = InvalidProductIdException.class)
 	public void test1() throws  InvalidProductIdException, ProductIdTypeMismatchException, UserNonExistentException {
-		d1.setUserId("Ram");
-		d1.setProductId(11);
-		d1.setQuantity(4);
+		d.setUserId("Ram");
+		d.setProductId(11);
+		d.setQuantity(4);
 		System.out.print("Test Case 2: ");
-		oacsi.addItemToCart(d1);
+		oacsi.addItemToCart(d);
 		
 	}
 	@Test(expected = QuantityNotInStockException.class)
 	public void test2() throws  InvalidProductIdException, ProductIdTypeMismatchException, UserNonExistentException,QuantityNotInStockException {
-		d2.setUserId("Ram");
-		d2.setProductId(1);
-		d2.setQuantity(6);
+		d.setUserId("Ram");
+		d.setProductId(1);
+		d.setQuantity(6);
 		System.out.print("Test Case 3: ");
-		oacsi.addItemToCart(d2);
+		oacsi.addItemToCart(d);
 		
 	}
+	
 	@After
 	public void cleanUp() {
 	 oacsi=null;	

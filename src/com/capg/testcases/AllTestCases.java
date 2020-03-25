@@ -11,11 +11,12 @@ import org.junit.runner.notification.Failure;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
+import com.capg.exception.UidNotStartWithCapitalLetterException;
 import com.capg.service.OrderAndCartServiceImpl;
 
 
 @RunWith(Suite.class)
-@SuiteClasses({OrderAndCartServiceImpl.class,OrderAndCartPresentationTest.class})
+@SuiteClasses({OrderAndCartServiceTest.class,OrderAndCartPresentationTest.class,UidNotStartWithCapitalLetterException.class})
 public class AllTestCases {
 	public static void main(String[] args) {
 	    // code relevant to test suite goes here

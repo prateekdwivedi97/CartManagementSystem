@@ -14,8 +14,7 @@ import com.capg.exception.*;
 public class OrderAndCartPresentationTest {
 	OrderAndCartPresentationImpl oacpti;
 	CartDto d=new CartDto();
-	CartDto d1=new CartDto();
-	CartDto d2=new CartDto();
+	
 	@Before
 	public void setUp() throws Exception {
 		oacpti=new OrderAndCartPresentationImpl();
@@ -33,31 +32,41 @@ public class OrderAndCartPresentationTest {
  
 	@Test
 	public void test1() {
-		d1.setUserId("Ram");
-		d1.setProductId(17);
-		d1.setQuantity(4);
+		d.setUserId("Ram");
+		d.setProductId(17);
+		d.setQuantity(4);
 		System.out.print("Test Case 2: ");
-		 oacpti.addItemToCart(d1);
+		 oacpti.addItemToCart(d);
 		 System.out.println();
 	}
 	
 	@Test
 	public void test2() {
-		d2.setUserId("Ram");
-		d2.setProductId(1);
-		d2.setQuantity(8);
+		d.setUserId("Ram");
+		d.setProductId(1);
+		d.setQuantity(8);
 		System.out.print("Test Case 3: ");
-		oacpti.addItemToCart(d2);
+		oacpti.addItemToCart(d);
 		System.out.println();
 	}
 	
 	@Test
 	public void test3() {
-		d2.setUserId("Ram");
-		d2.setProductId(1);
-		d2.setQuantity(4);
+		d.setUserId("Ram");
+		d.setProductId(1);
+		d.setQuantity(4);
 		System.out.print("Test Case 4: ");
-		oacpti.addItemToCart(d2);
+		oacpti.addItemToCart(d);
+		System.out.println();
+	}
+	@Test
+	public void test4()  {
+		d.setUserId("ram");
+		d.setProductId(1);
+		d.setQuantity(4);
+		System.out.print("Test Case 5: ");
+		oacpti.addItemToCart(d);
+		
 	}
 	
 	@After

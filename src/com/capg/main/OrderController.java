@@ -9,6 +9,7 @@ import java.util.TreeSet;
 
 import com.capg.dto.CartDto;
 import com.capg.exception.ProductIdTypeMismatchException;
+import com.capg.exception.UidNotStartWithCapitalLetterException;
 import com.capg.presentation.OrderAndCartPresentationImpl;
 import com.capg.repository.UserRepository;
 import com.capg.service.OrderAndCartService;
@@ -17,7 +18,7 @@ import com.capg.service.OrderAndCartServiceImpl;
 public class OrderController {
 	public static List<CartDto> cart;
 
-	public static void main(String[] args) throws ProductIdTypeMismatchException {
+	public static void main(String[] args) throws ProductIdTypeMismatchException,UidNotStartWithCapitalLetterException {
 		String ch = "N";
 		cart = new ArrayList<CartDto>();
 
@@ -34,6 +35,12 @@ public class OrderController {
 
 			System.out.println("Enter the User-Id");
 			uid = sc.nextLine();
+			if(uid.charAt(0)>=97 && uid.charAt(0)<=122)
+			{
+				UidNotStartWithCapitalLetterException ui = new UidNotStartWithCapitalLetterException();
+				System.out.println(ui.errorMessage());
+				System.exit(0);
+			}
 
 			try {
 				System.out.println("Enter the Product-Id");
